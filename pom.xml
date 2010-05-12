@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>no.back.springextensions</groupId>
+	<artifactId>RelaxedPropertyPlaceHolderConfigurer</artifactId>
+	<version>0.1-ALPHA</version>
+	<packaging>jar</packaging>
+
+	<name>RelaxedPropertyPlaceHolderConfigurer</name>
+	<url>http://github.com/stopher/RelaxedPropertyPlaceHolderConfigurer</url>
+
+	<description>Enables using a CouchDB database for Spring bean properties </description>
+
+	<build>
+	 <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+             </plugin>
+      </plugins>
+	</build>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.version>3.0.0.RELEASE</spring.version>
+		<jcouchdb.version>0.11.0-1</jcouchdb.version>
+		<junit.version>4.8.1</junit.version>
+		<slf4j-log4j12.version>1.5.6</slf4j-log4j12.version>
+		<mockito-all.version>1.8.1</mockito-all.version>
+	</properties>
+
+	<developers>
+		<developer>
+			<name>Christopher Holst-Pedersen Olaussen</name>
+		</developer>
+	</developers>
+
+	<repositories>
+
+		<!-- jcouchdb artifact repository -->
+		<repository>
+			<id>de.fforw.releases</id>
+			<url>http://fforw.de/m2repo/releases/</url>
+			<releases>
+				<enabled>true</enabled>
+				<checksumPolicy>warn</checksumPolicy>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<checksumPolicy>warn</checksumPolicy>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.google.code.jcouchdb</groupId>
+			<artifactId>jcouchdb</artifactId>
+			<version>${jcouchdb.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${mockito-all.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j-log4j12.version}</version>
+		</dependency>
+
+	</dependencies>
+
+</project>
