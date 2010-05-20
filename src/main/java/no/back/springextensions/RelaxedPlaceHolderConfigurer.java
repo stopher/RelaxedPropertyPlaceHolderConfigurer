@@ -41,7 +41,7 @@ import org.svenson.JSONParser;
  */
 public class RelaxedPlaceHolderConfigurer extends PropertyPlaceholderConfigurer {
 
-	Logger logger = LoggerFactory.getLogger(RelaxedPlaceHolderConfigurer.class);
+	private Logger logger = LoggerFactory.getLogger(RelaxedPlaceHolderConfigurer.class);
 
 	// default values for bean definition
 	public static final String DEFAULT_HOSTNAME = "localhost";
